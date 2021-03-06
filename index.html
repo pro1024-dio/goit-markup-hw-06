@@ -69,8 +69,9 @@
                 Эффективные решения <br />
                 для вашего бизнеса
               </h1>
-              <!-- <p><a class="link " href="#">Заказать услугу</a></p> -->
-              <button class="btn-order" data-modal-open>Заказать услугу</button>
+              <button type="submit" class="btn-submit" data-modal-open>
+                Заказать услугу
+              </button>
             </div>
           </div>
         </div>
@@ -435,8 +436,8 @@
           <div class="footer-block-wrap">
             <p class="logo">
               <a class="link" href="./index.html"
-                >Web<span class="logofooter-secondpart">Studio</span></a
-              >
+                >Web<span class="logofooter-secondpart">Studio</span>
+              </a>
             </p>
             <address id="contacts">
               <p class="address-info">г. Киев, пр-т Леси Украинки, 26</p>
@@ -487,6 +488,22 @@
               </li>
             </ul>
           </div>
+          <div class="footer-block-wrap">
+            <h2 class="title">Подпишитесь на рассылку</h2>
+            <form class="form-subscribe">
+              <input
+                type="email"
+                name="input-email"
+                class="input-email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="btn-submit btn-with-icon-before">
+                Подписаться<svg class="btn-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -497,6 +514,53 @@
             <use href="./images/icons.svg#modal-btn-close"></use>
           </svg>
         </button>
+        <form action="" class="modal-form">
+          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <label for="modal-name" class="modal-lable">Имя</label>
+          <input
+            type="text"
+            id="modal-name"
+            name="modal-name"
+            class="modal-input"
+          />
+          <label for="modal-tel" class="modal-lable">Телефон</label>
+          <input
+            type="tel"
+            id="modal-tel"
+            name="modal-tel"
+            class="modal-input"
+          />
+          <label for="modal-email" class="modal-lable">Почта</label>
+          <input
+            type="email"
+            id="modal-email"
+            name="modal-email"
+            class="modal-input"
+          />
+          <label for="modal-textarea-comment" class="modal-lable"
+            >Комментарий</label
+          >
+          <textarea
+            id="modal-textarea-comment"
+            name="modal-comment"
+            class="modal-input modal-textarea"
+            cols="30"
+            rows="4"
+            placeholder="Введите текст"
+          ></textarea>
+          <div class="modal-container-accept-terms">
+            <input
+              type="checkbox"
+              name="modal-chbox-accept-terms"
+              id="modal-accept-terms"
+            />
+            <label for="modal-accept-terms"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a></label
+            >
+          </div>
+          <button type="submit" class="btn-submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

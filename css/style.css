@@ -36,6 +36,11 @@ body ul {
   margin-block-end: 0;
 }
 
+input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
 address {
   font-style: normal;
 }
@@ -47,6 +52,32 @@ address {
 .link {
   text-decoration: none;
   outline: none;
+}
+
+.btn-submit {
+  display: block;
+  min-width: 200px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  background: var(--accent-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  border-style: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 250ms var(--timing-transition);
+}
+
+.btn-submit:focus,
+.btn-submit:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Style general container */
@@ -220,7 +251,11 @@ address {
 
 /* style main section */
 
-/* section Hero  */
+/* ------- 
+
+section Hero 
+
+ ------- */
 
 .hero > .canvas {
   background-image: linear-gradient(
@@ -249,6 +284,10 @@ address {
   padding: 200px 0;
 }
 
+.hero .btn-submit {
+  margin: 0 auto;
+}
+
 .tagline {
   display: block;
   margin-bottom: 30px;
@@ -259,21 +298,6 @@ address {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.btn-order {
-  display: block;
-  padding: 10px 32px;
-  margin: 0 auto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.86;
-  text-align: center;
-  letter-spacing: 0.06em;
-  background: var(--accent-color);
-  color: var(--white-color);
-  border-radius: 4px;
-  border-style: none;
 }
 
 /* style section feuture */
@@ -500,7 +524,12 @@ address {
   fill: currentColor;
 }
 
-/* style for footer */
+/* ------
+
+STYLE FOR FOOTER
+
+------*/
+
 .footer {
   min-width: var(--width-container);
   background-color: var(--accent-bgcolor);
@@ -509,16 +538,9 @@ address {
 .footer .container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   padding-bottom: 60px;
   padding-top: 60px;
-}
-
-.footer .container .footer-block-wrap:not(:first-child) {
-  width: 206px;
-}
-
-.footer .container .footer-block-wrap:not(:last-child) {
-  margin-right: 70px;
 }
 
 .footer .logo {
@@ -564,6 +586,10 @@ address {
   color: var(--social-color);
 }
 
+.social-footer-list > .social-footer-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social-footer-list-item > a {
   display: inline-flex;
   align-items: center;
@@ -590,7 +616,47 @@ address {
   fill: currentColor;
 }
 
-/* only potfolio pages */
+.form-subscribe {
+  display: flex;
+  justify-content: baseline;
+}
+
+.form-subscribe > .input-email {
+  padding: 15px 16px;
+  min-height: 50px;
+  min-width: 358px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-subscribe > .input-email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.form-subscribe > .btn-submit {
+  margin-left: 12px;
+}
+
+.btn-with-icon-before > .btn-icon {
+  vertical-align: middle;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+/*-------
+ 
+ONLY PORTFOLIO PAGES 
+ 
+ -------*/
 
 .section-portfolio .filter-nav {
   display: flex;
@@ -722,6 +788,12 @@ address {
   color: var(--basic-textcolor);
 }
 
+/* -------
+
+BACKDROP WITH MODAL WINDOW
+
+  ------- */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -750,7 +822,7 @@ address {
   left: 50%;
   height: 581px;
   width: 528px;
-  padding: 8px;
+  padding: 40px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -773,4 +845,86 @@ address {
   border: none;
   box-shadow: none;
   background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  transition: color 250ms var(--timing-transition);
+}
+
+.modal-btn-close:focus,
+.modal-btn-close:hover {
+  color: var(--accent-color);
+}
+
+.modal-form {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.modal-form > .form-title {
+  display: block;
+  min-width: 100%;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--basic-hcolor);
+}
+
+.modal-form > .modal-input {
+  display: block;
+  min-width: 100%;
+  min-height: 40px;
+  margin-bottom: 10px;
+  padding: 12px 15px 12px 42px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--timing-transition);
+}
+
+.modal-form > .modal-input:hover,
+.modal-form > .modal-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-form > .modal-input.modal-textarea {
+  min-height: 120px;
+  margin-bottom: 0;
+  padding-left: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  color: var(--basic-textcolor);
+  resize: none;
+}
+
+.modal-form > .modal-input.modal-textarea::placeholder {
+  color: var(--basic-textcolor-50);
+}
+
+.modal-form > .modal-lable {
+  display: block;
+  min-width: 100%;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: var(--basic-textcolor);
+}
+
+.modal-container-accept-terms {
+  min-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modal-form > .btn-submit {
+  margin: 0 auto;
 }
