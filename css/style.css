@@ -1,10 +1,3 @@
-/* font-family: 'Oleo Script', cursive;
-font-family: 'Raleway', sans-serif; */
-/* 
-* {
-  outline: 1px solid tomato;
-} */
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -14,13 +7,11 @@ body {
   color: var(--basic-textcolor);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+/* ------- 
 
-/* reset style for tags and base classes*/
+reset style for tags and base classes
+
+------- */
 
 body h1,
 body h2,
@@ -36,6 +27,12 @@ body ul {
   margin-block-end: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 input {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -43,6 +40,29 @@ input {
 
 address {
   font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .listitem {
@@ -70,8 +90,9 @@ address {
   border-radius: 4px;
   border-style: none;
   box-shadow: none;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
+
   transition: box-shadow 250ms var(--timing-transition);
 }
 
@@ -80,8 +101,13 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Style general container */
-/* container */
+/* ------- 
+
+Style general container
+container
+
+------- */
+
 .canvas {
   max-width: 100%;
   min-width: var(--width-container);
@@ -90,17 +116,22 @@ address {
 
 .container {
   width: var(--width-container);
-  padding: 94px 15px;
   margin: 0 auto;
+  padding: 94px 15px;
 }
 
-/* general style section */
+/* -------
+
+general style section elements
+
+------- */
+
 .base-title {
   margin-bottom: 50px;
   font-weight: 700;
-  color: var(--basic-hcolor);
   font-size: 36px;
   line-height: 1.17;
+  color: var(--basic-hcolor);
   text-align: center;
 }
 
@@ -114,7 +145,12 @@ address {
   line-height: 1.71;
 }
 
-/* general HEADER and FOOTTER sections: logo, menu, contact*/
+/* ------- 
+
+general HEADER and FOOTTER sections: logo, menu, contact
+
+------- */
+
 .header > .canvas {
   border-bottom: 1px solid var(--border-header-color);
 }
@@ -133,10 +169,10 @@ address {
 
 .logo .link {
   font-family: 'Raleway', sans-serif;
-  color: var(--accent-color);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  color: var(--accent-color);
   outline: none;
 }
 
@@ -170,22 +206,23 @@ address {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--basic-hcolor);
   font-weight: 500;
   letter-spacing: 0.02em;
+  color: var(--basic-hcolor);
   outline: none;
 }
 
 .menu .link::after {
   content: '';
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
   bottom: -1px;
   right: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
   background: var(--accent-color);
+  border-radius: 2px;
+
   transform: scaleX(0);
   transition-property: transform;
   transition-duration: 250ms;
@@ -212,13 +249,18 @@ address {
 .menu .link:not(.active):focus::after {
   content: '';
   display: block;
+
   transform: scaleX(1);
 }
 
-/* .menu .link:focus,
+/* -------
+
+.menu .link:focus,
 .listinfo .link:focus {
   box-shadow: 0 0 0 3px var(--accent-color);
-} */
+} 
+
+------- */
 
 .menu .link.active {
   color: var(--accent-color);
@@ -248,8 +290,6 @@ address {
   vertical-align: middle;
   fill: currentColor;
 }
-
-/* style main section */
 
 /* ------- 
 
@@ -291,30 +331,25 @@ section Hero
 .tagline {
   display: block;
   margin-bottom: 30px;
-  color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  color: var(--white-color);
+  text-align: center;
   text-transform: uppercase;
 }
 
-/* style section feuture */
+/* ------- 
+
+style section feuture 
+
+------- */
 
 .features .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 
 .features .title {
@@ -326,17 +361,21 @@ section Hero
 }
 
 .features .listitem > .thumb {
-  width: 100%;
-  height: 120px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 120px;
   background-color: var(--section-bgcolor);
   border-radius: 4px;
 }
 
-/* style section portfolio */
+/* -------
+
+style section portfolio 
+
+------- */
 
 .portfolio .container {
   padding-top: 0;
@@ -364,14 +403,6 @@ section Hero
   position: relative;
 }
 
-/* .portfolio .title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  text-transform: capitalize;
-} */
-
 .portfolio .container-overlay > .title {
   padding: 27px 0;
   text-align: center;
@@ -379,13 +410,11 @@ section Hero
   color: var(--white-color);
 }
 
-/* .portfolio .text {
-  font-size: 16px;
-  line-height: 1.88;
-  text-transform: capitalize;
-} */
+/* -------
 
-/* style section ourteam */
+style section ourteam 
+
+------- */
 
 .ourteam .list {
   display: flex;
@@ -446,9 +475,10 @@ section Hero
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   color: var(--social-color);
+  border-radius: 50%;
   outline: none;
+
   transition: background-color 250ms var(--timing-transition),
     color 250ms var(--timing-transition);
 }
@@ -467,7 +497,12 @@ section Hero
   fill: currentColor;
 }
 
-/* style for section clients */
+/* -------
+
+style for section clients 
+
+------- */
+
 .clients .list {
   display: flex;
   flex-wrap: wrap;
@@ -498,11 +533,12 @@ section Hero
   height: 100%;
   text-decoration: none;
   color: inherit;
-  outline: none;
   border: 1px solid var(--social-color);
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow: none;
+  outline: none;
+
   transition: background-color 250ms var(--timing-transition),
     color 250ms var(--timing-transition),
     box-shadow 250ms var(--timing-transition);
@@ -596,10 +632,11 @@ STYLE FOR FOOTER
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   background-color: var(--footter-acolor-10);
   color: var(--white-color);
+  border-radius: 50%;
   outline: none;
+
   transition: background-color 250ms var(--timing-transition);
 }
 
@@ -625,21 +662,21 @@ STYLE FOR FOOTER
   padding: 15px 16px;
   min-height: 50px;
   min-width: 358px;
-  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline: none;
 }
 
 .form-subscribe > .input-email::placeholder {
-  color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-subscribe > .btn-submit {
@@ -673,16 +710,17 @@ ONLY PORTFOLIO PAGES
   padding: 6px 22px;
   border-style: none;
   border-radius: 4px;
-  background-color: var(--section-bgcolor);
-  color: var(--basic-hcolor);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
-  outline: none;
+  background-color: var(--section-bgcolor);
+  color: var(--basic-hcolor);
   box-shadow: none;
+  outline: none;
+
   transition: background-color 250ms var(--timing-transition),
     color 250ms var(--timing-transition),
     box-shadow 250ms var(--timing-transition);
@@ -704,11 +742,11 @@ ONLY PORTFOLIO PAGES
 }
 
 .portfolio-list {
+  margin-top: calc(-1 * var(--min-indent));
+  margin-left: calc(-1 * var(--min-indent));
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: calc(-1 * var(--min-indent));
-  margin-left: calc(-1 * var(--min-indent));
 }
 
 .portfolio-list .listitem {
@@ -725,10 +763,11 @@ ONLY PORTFOLIO PAGES
 .portfolio-card-container .listitem > a {
   display: inline-block;
   height: 100%;
-  outline: none;
   text-decoration: none;
   border: 1px solid #eeeeee;
   box-shadow: none;
+  outline: none;
+
   transition: box-shadow 250ms var(--timing-transition);
 }
 
@@ -739,25 +778,26 @@ ONLY PORTFOLIO PAGES
 
 .portfolio-card-img > .container-overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
   bottom: 0;
   left: 0;
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   background-color: var(--accent-color);
+
   transform: translatey(200%);
   transition: transform 250ms var(--timing-transition);
 }
 
 .portfolio-card-container .card-description {
   padding: 0 24px;
-  color: var(--white-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+  color: var(--white-color);
 }
 
 .portfolio-card-container .listitem > a:hover,
@@ -802,18 +842,14 @@ BACKDROP WITH MODAL WINDOW
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms var(--timing-transition);
   cursor: not-allowed;
+
+  transition: opacity 250ms var(--timing-transition);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal-order {
-  transform: translate(-50%, -50%) scale(0.9);
-  box-shadow: none;
 }
 
 .modal-order {
@@ -824,14 +860,20 @@ BACKDROP WITH MODAL WINDOW
   width: 528px;
   padding: 40px;
   background-color: var(--white-color);
+  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  cursor: auto;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-transition),
     box-shadow 250ms var(--timing-transition);
-  cursor: auto;
+}
+
+.backdrop.is-hidden .modal-order {
+  box-shadow: none;
+
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal-btn-close {
@@ -840,13 +882,14 @@ BACKDROP WITH MODAL WINDOW
   right: 8px;
   padding: 0;
   margin: 0;
+  background-color: transparent;
+  color: var(--logoheader-second-color);
   border-radius: 50%;
-  outline: none;
   border: none;
   box-shadow: none;
-  background-color: transparent;
-  color: #000;
+  outline: none;
   cursor: pointer;
+
   transition: color 250ms var(--timing-transition);
 }
 
@@ -872,43 +915,65 @@ BACKDROP WITH MODAL WINDOW
   color: var(--basic-hcolor);
 }
 
-.modal-form > .modal-input {
+.modal-form .wrap-input {
+  position: relative;
+}
+
+.modal-order .modal-form .modal-input {
   display: block;
   min-width: 100%;
   min-height: 40px;
   margin-bottom: 10px;
   padding: 12px 15px 12px 42px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
+  color: var(--basic-textcolor);
   border-width: 1px;
   border-style: solid;
   border-color: rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
+
   transition: border-color 250ms var(--timing-transition);
 }
 
-.modal-form > .modal-input:hover,
-.modal-form > .modal-input:focus {
+.modal-form .wrap-input .modal-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: var(--basic-hcolor);
+  transform: translateY(-50%);
+
+  transition: color 250ms var(--timing-transition);
+}
+
+.modal-form .modal-input:focus + .modal-field-icon,
+.modal-form .modal-input:hover + .modal-field-icon {
+  color: var(--accent-color);
+  fill: currentColor;
+}
+
+.modal-form .modal-input:hover,
+.modal-form .modal-input:focus {
   border-color: var(--accent-color);
 }
 
-.modal-form > .modal-input.modal-textarea {
+.modal-form .modal-input.modal-textarea {
   min-height: 120px;
   margin-bottom: 0;
   padding-left: 17px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.143;
-  letter-spacing: 0.01em;
-  color: var(--basic-textcolor);
   resize: none;
 }
 
-.modal-form > .modal-input.modal-textarea::placeholder {
+.modal-form .modal-input.modal-textarea::placeholder {
   color: var(--basic-textcolor-50);
 }
 
-.modal-form > .modal-lable {
+.modal-form .modal-lable {
   display: block;
   min-width: 100%;
   margin-bottom: 4px;
@@ -919,10 +984,37 @@ BACKDROP WITH MODAL WINDOW
   color: var(--basic-textcolor);
 }
 
-.modal-container-accept-terms {
+.modal-accept-terms-field {
   min-width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
+  padding-left: 23px;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.modal-form .modal-chbox-accept-terms:checked + .modal-field-icon {
+  border: none;
+}
+
+.modal-form .modal-chbox-accept-terms:not(:checked) + .modal-field-icon > use {
+  display: none;
+}
+
+.modal-form .modal-accept-terms-field {
+  cursor: pointer;
+}
+
+.modal-link-terms {
+  color: var(--accent-color);
+}
+
+.modal-accept-terms-field > .wrap-input > .modal-field-icon {
+  left: -23px;
+  top: 50%;
+  border: 2px solid var(--basic-hcolor);
+  border-radius: 2px;
 }
 
 .modal-form > .btn-submit {
