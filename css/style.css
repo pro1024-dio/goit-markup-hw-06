@@ -998,6 +998,10 @@ BACKDROP WITH MODAL WINDOW
   border: none;
 }
 
+.modal-form .modal-chbox-accept-terms:checked + .modal-field-icon > use {
+  display: block;
+}
+
 .modal-form .modal-chbox-accept-terms:not(:checked) + .modal-field-icon > use {
   display: none;
 }
