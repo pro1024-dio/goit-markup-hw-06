@@ -917,6 +917,7 @@ BACKDROP WITH MODAL WINDOW
 
 .modal-form .wrap-input {
   position: relative;
+  cursor: pointer;
 }
 
 .modal-order .modal-form .modal-input {
@@ -941,12 +942,12 @@ BACKDROP WITH MODAL WINDOW
   transition: border-color 250ms var(--timing-transition);
 }
 
-.modal-form .wrap-input .modal-field-icon {
+.modal-form .modal-field-icon {
   position: absolute;
-  top: 50%;
   left: 12px;
   color: var(--basic-hcolor);
-  transform: translateY(-50%);
+  transform: translateY(-40px);
+  fill: currentColor;
 
   transition: color 250ms var(--timing-transition);
 }
@@ -954,7 +955,6 @@ BACKDROP WITH MODAL WINDOW
 .modal-form .modal-input:focus + .modal-field-icon,
 .modal-form .modal-input:hover + .modal-field-icon {
   color: var(--accent-color);
-  fill: currentColor;
 }
 
 .modal-form .modal-input:hover,
@@ -985,6 +985,7 @@ BACKDROP WITH MODAL WINDOW
 }
 
 .modal-accept-terms-field {
+  position: relative;
   min-width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -1014,9 +1015,11 @@ BACKDROP WITH MODAL WINDOW
   color: var(--accent-color);
 }
 
-.modal-accept-terms-field > .wrap-input > .modal-field-icon {
-  left: -23px;
+.modal-accept-terms-field > .modal-field-icon {
+  position: absolute;
+  left: 10px;
   top: 50%;
+  transform: translateY(-50%);
   border: 2px solid var(--basic-hcolor);
   border-radius: 2px;
 }
